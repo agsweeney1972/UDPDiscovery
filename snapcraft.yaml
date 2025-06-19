@@ -1,0 +1,22 @@
+name: udp-responder
+base: core22
+version: '1.0'
+summary: UDP Discovery Responder
+description: |
+  Responds to UDP discovery packets for device discovery.
+grade: stable
+confinement: strict
+
+apps:
+  responder:
+    command: udp_responder.py
+    daemon: simple
+    restart-condition: always
+    plugs: [network-bind, network]
+
+parts:
+  responder:
+    plugin: dump
+    source: .
+    stage:
+      - udp_responder.py
