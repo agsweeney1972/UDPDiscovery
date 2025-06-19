@@ -26,6 +26,15 @@ Received from 172.16.92.102: SERVER FOUND:edge-gateway-2;IP:172.16.92.102
 ```
 
 ## Usage
+### Installing the Snap Package
+To install the UDP responder as a snap service on Ubuntu Core or other snap-supported systems:
+
+```sh
+sudo snap install udp-responder_1.0_amd64.snap --dangerous
+```
+
+The `--dangerous` flag is required when installing local snap files that haven't been published to the Snap Store.
+
 ### On Each Device (Responder)
 - Install Python 3 if not already present.
 - Run:
@@ -50,7 +59,6 @@ Received from 172.16.92.102: SERVER FOUND:edge-gateway-2;IP:172.16.92.102
 - Only discovers devices on the same subnet (network segment).
 - Devices with static IPs outside the subnet will not be found unless the management computer’s IP is temporarily changed to match.
 - For devices with unknown or misconfigured IPs, use ARP scanning tools (e.g., arp-scan, Wireshark) to detect them by MAC address.
-- The Windows .exe runs very slowly with Norton Antivirus - I created an exception in Norton settings which fixed it for me.
 
 ## License
 MIT
