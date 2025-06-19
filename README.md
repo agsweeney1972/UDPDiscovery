@@ -50,6 +50,7 @@ Received from 172.16.92.102: SERVER FOUND:edge-gateway-2;IP:172.16.92.102
 - Only discovers devices on the same subnet (network segment).
 - Devices with static IPs outside the subnet will not be found unless the management computer’s IP is temporarily changed to match.
 - For devices with unknown or misconfigured IPs, use ARP scanning tools (e.g., arp-scan, Wireshark) to detect them by MAC address.
+- The Windows .exe runs very slowly with Norton Antivirus - I created an exception in Norton settings which fixed it for me.
 
 ## License
 MIT
